@@ -3,7 +3,7 @@
     <div class="recommend-title">周末去哪儿</div>
     <ul>
       <li class="item border-bottom"
-          v-for=" item in recommendList"
+          v-for=" item in list"
           :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl"
@@ -22,25 +22,20 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data() {
-    return {
-      recommendList: [{ id: '0001', imgUrl: 'https://imgs.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }, { id: '0002', imgUrl: 'https://imgs.qunarzz.com/sight/source/1811/63/808c022b285a2c.jpg_r_640x214_ad984479.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }, { id: '0003', imgUrl: 'https://imgs.qunarzz.com/sight/source/1507/de/e6ba44d61894c0.jpg_r_640x214_847324d0.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }]
-    }
-  }
+  props: { list: Array },
 
 }
 </script>
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
 .recommend-title
-  margin-top: 0.2rem
   line-height: 0.8rem
   background-color: #eee
   text-indent: 0.2rem
 .item-img-wrapper
   overflow: hidden
   height: 0
-  padding-bottom: 33.9%
+  padding-bottom: 37.09%
   .item-img
     width: 100%
 .item-info

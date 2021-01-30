@@ -11,5 +11,18 @@ module.exports = {
       .set('styles', resolve('./src/assets/styles'))
     //set第一个参数：设置的别名，第二个参数：设置的路径
 
+  },
+  devServer: {
+    host: "localhost",
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      },
+    }
   }
 }

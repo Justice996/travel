@@ -3,7 +3,7 @@
     <div class="recommend-title">热销推荐</div>
     <ul>
       <li class="item border-bottom"
-          v-for=" item in recommendList"
+          v-for=" item in list"
           :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl"
@@ -23,12 +23,7 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      recommendList: [{ id: '0001', imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }, { id: '0002', imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }, { id: '0003', imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg', title: '军都山滑雪场', desc: '老北京的温柔乡，北京签到地' }]
-    }
-  }
-
+  props: { list: Array },
 }
 </script>
 <style lang="stylus" scoped>
