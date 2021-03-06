@@ -74,7 +74,6 @@
           <div class="item border-bottom">阿拉尔</div>
           <div class="item border-bottom">阿拉尔</div>
           <div class="item border-bottom">阿拉尔</div>
-
         </div>
       </div>
     </div>
