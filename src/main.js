@@ -8,6 +8,8 @@ import 'styles/iconfont.css'
 import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper/swiper.esm'
 import getAwesomeSwiper from 'vue-awesome-swiper/dist/exporter'
 import store from './stroe'
+//兼容es6
+import 'babel-polyfill'
 
 // Swiper modules
 SwiperClass.use([Pagination, Mousewheel, Autoplay])
