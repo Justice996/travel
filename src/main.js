@@ -7,6 +7,7 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 import { Swiper as SwiperClass, Pagination, Mousewheel, Autoplay } from 'swiper/swiper.esm'
 import getAwesomeSwiper from 'vue-awesome-swiper/dist/exporter'
+import store from './stroe'
 
 // Swiper modules
 SwiperClass.use([Pagination, Mousewheel, Autoplay])
@@ -23,5 +24,6 @@ fastClick.attach(document.body)
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
